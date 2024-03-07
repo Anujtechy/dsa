@@ -1,0 +1,30 @@
+# **heap (Priority Queue)**
+---
+- Structure - **Complete Binary Tree**
+  - Every level is complete except may be the last level. All nodes of the last level as left as possible.
+- Types of heaps:
+  - Min heap --> For all nodes, **node.data <= children data**
+  - Max heap --> For all node, **node.data >= children data**
+- No relationship between left and right subtree.
+- Due to complete binary tree structure, we also can use array to store data instead of using left and right pointers. (Level Order Traversal)
+  - For all nodes, left child = 2n+1
+  - For all nodes, right child = 2n+2
+  - parent = (i-1)/2 (Array this is possible) --> Array is good choice
+- Insertion in the heap
+  - **Heapify** --> Maintain properties of heap after any operations
+  - Bottom Up movements
+  - TC = O(logn)
+- getMin() in the heap (min heap)
+  - Top Down movements
+- Searching Element in the heap
+  - heap is not good for searching operation because left and right subtree do not have any relationship.So we need to parse entire tree.
+  - Time Complexity TC = O(N)
+  - Use HashMap, HashSet or Binary Search Tree
+- Build Min heap
+  - Insert all element one by one --> TC = O(nlogn)
+  - If all the element are known
+    - Number of leaves nodes in complete binary tree = (n+1)/2
+      - means half nodes of complete binary tree is leaf nodes.
+    - Bottom up Approach --> TC = O(n)
+    - Inplace heap Build
+      - TC = O(n), SC = O(1)
